@@ -29,8 +29,8 @@ export default {
     return{
       count:1,
       posts:[
-        {id:0, title:"Post 1", body:"This is post about VUE"},
-        {id:1, title:"Post 2", body:"This is post about REACT"}
+        {id:0, title:"VUE", body:"This is post about VUE", type:'blue'},
+        {id:1, title:"REACT", body:"This is post about REACT", type:'red'}
       ]
     }
   },
@@ -46,7 +46,7 @@ export default {
       this.posts = this.posts.filter(post => post.id !== id)
 
     }
-    
+
   }
 }
 </script>

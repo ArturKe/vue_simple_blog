@@ -1,12 +1,22 @@
 <template>
     <div>
-        <div class="postCard"  v-for="post in posts" :key="post.id"> 
-            <div class="postCard__top">
-                <h3>Title: {{post.title}}</h3>
-                <button @click="deletePost(post.id)">Delete</button>
-            </div>
+        <div  v-for="(post, index) in posts" :key="post.id"> 
+            <div :class="'postCard ' + post.type ">
 
-            <div >{{post.body}}</div> 
+                <div class="postCard__top">
+                    <div class="postCard__title">
+                        <h3>#{{index}} Title: {{post.title}}</h3>
+                        <h4 class="postCard__time">{{new Date(post.id).toLocaleTimeString('it-IT')}}  {{ new Date(post.id).toLocaleDateString() }}</h4>
+
+                    </div>
+                    
+                    <button @click="deletePost(post.id)">Delete</button>
+                </div>
+
+                <div >{{post.body}}</div> 
+
+            </div>
+            
         </div>
     </div>
     
@@ -43,6 +53,33 @@
         align-items: flex-start;
     }
 
+    .postCard.red{
+        background-color: #ffdfef;
+    }
+
+    .postCard.violet{
+        background-color: #f7d6ff;
+    }
+
+    .postCard.blue{
+        background-color: #e0e6f3;
+    }
+
+    .postCard.green{
+        background-color: #dfffea;
+    }
+
+    .postCard.white{
+        background-color: #ffffff;
+    }
+
+    .postCard.ocean{
+        background-color: #a8e6f3;
+    }
+
+    .postCard.sun{
+        background-color: #ffe290;
+    }
 
     .postCard__top{
     width: 100% ;
@@ -57,6 +94,20 @@
         border: 1px solid black;
         cursor: pointer;
         font-size: 16px;
+    }
+
+    .postCard__time{
+        color: gray;
+
+    }
+
+    .postCard__title{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        line-height: 0;
+        padding-left: 5px;
+
     }
 
 </style>

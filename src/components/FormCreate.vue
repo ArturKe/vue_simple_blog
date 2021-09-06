@@ -13,6 +13,15 @@ export default {
     name:'FormCreate',
     data(){
         return{
+            colors:[
+                'red',
+                'blue',
+                'violet',
+                'sun',
+                'green',
+                'white',
+                'ocean'
+            ],
 
             post:{
                 title:'',
@@ -26,10 +35,11 @@ export default {
 
     methods:{
         createPost(){
+            let randomIndex = Math.floor(Math.random()*this.colors.length)
            
             this.post.id = Date.now()
-            console.log('Create Post ' + this.post.title)
-            console.log(this.post)
+            this.post.type = this.colors[randomIndex]
+            console.log(randomIndex)
     
             this.$emit('create', this.post)
             this.post = {
