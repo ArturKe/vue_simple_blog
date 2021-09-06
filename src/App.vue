@@ -46,8 +46,7 @@ export default {
       this.posts = this.posts.filter(post => post.id !== id)
 
     }
-
-   
+    
   }
 }
 </script>
@@ -61,6 +60,12 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  @media screen and (max-width: 767px) {
+    input, select, textarea {
+      font-size: 16px;
+    }
   }
 
 </style>

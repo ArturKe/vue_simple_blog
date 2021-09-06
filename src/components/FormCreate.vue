@@ -52,9 +52,10 @@ export default {
 <style scoped>
 
     .form{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
+        margin: 0 auto;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
     }
 
     .form button{
@@ -80,6 +81,7 @@ export default {
     border: 3px solid red;
     background-color:rgb(248, 231, 231)
     }
+
 
 
 </style>

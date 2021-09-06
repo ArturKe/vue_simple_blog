@@ -31,16 +31,16 @@
 
 <style>
     .postCard{
-    width:90%;
-    min-height: 50px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    margin: 0 auto;
-    margin-top: 10px;  
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+        max-width:800px;
+        min-height: 50px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-top: 10px;  
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 
@@ -48,6 +48,15 @@
     width: 100% ;
     display: flex;
     justify-content: space-between;
+    }
+
+    .postCard button{
+        background-color: none;
+        height: 45px;
+        border-radius: 8px;
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 16px;
     }
 
 </style>
