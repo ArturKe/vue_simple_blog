@@ -15,9 +15,9 @@ export default {
         return{
             colors:[
                 'red',
+                'sun',
                 'blue',
                 'violet',
-                'sun',
                 'green',
                 'white',
                 'ocean'

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <h2>Form</h2>
+    <h2>Form viewer</h2>
 
     <div  class="bigForm">
 
@@ -141,7 +141,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 30px;
   }
 
   @media screen and (max-width: 767px) {
@@ -151,6 +151,8 @@ export default {
   }
 
   .bigForm{
+    max-width:800px;
+    margin: 0 auto;
     display: flex;
     border: 2px solid rgb(175, 175, 175);
     border-radius: 5px;
